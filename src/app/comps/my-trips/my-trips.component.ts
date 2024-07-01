@@ -39,8 +39,6 @@ export class MyTripsComponent implements OnInit {
       this.ts.getById(this.is.InvitationList[i].invitationTripId).subscribe(
         suc => {
           this.myTrips.push(suc)
-          console.log(suc);
-
         }
       )
     }
