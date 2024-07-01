@@ -37,7 +37,7 @@ export class InvitationService {
   }
 
   delete(UId: number = 0, TId: number = 0): Observable<boolean> {
-    return this.http.delete<boolean>(this.basicUrl + "/" + UId + "/" + TId)
+    return this.http.delete<boolean>(this.basicUrl + "/" + TId + "/" + UId)
   }
 
 }

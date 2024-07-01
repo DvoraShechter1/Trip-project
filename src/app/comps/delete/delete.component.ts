@@ -6,7 +6,7 @@ import { InvitationService } from 'src/services/invitation.service';
 @Component({
   selector: 'app-delete',
   templateUrl: './delete.component.html',
-  styleUrls: ['./delete.component.scss']
+  styleUrls: ['./delete.component.scss','../trip-details/trip-details.component.css']
 })
 export class DeleteComponent {
   constructor(public ar: ActivatedRoute, public r: Router, public is: InvitationService, public us: UserService) { }
@@ -19,8 +19,12 @@ export class DeleteComponent {
     this.ar.params.subscribe(
       data => {
         console.log(data['Id']);
+        console.log(this.us.currentCust.userId);
+        
         this.is.delete(this.us.currentCust.userId, data['Id']).subscribe(
           suc => {
+            console.log(suc);
+            
             if (suc) {
               this.close()
               alert("you have deleted your invitation")
