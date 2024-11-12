@@ -1,4 +1,6 @@
-# AngularProject
+# Trips
+
+A web application to manage and organize travel plans, allowing users to create, update, and keep track of their trips with ease.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
 
